@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+
+<html ng-app="tumblrApp">
+<head>
+	<title>TumblrEsque</title>
+	<link rel="stylesheet" href="css/main.css">
+	
+
+</head>
+
+<body ng-controller="tumblrController">
+	<div class="header">
+		<p>Tumblring</p>
+	</div>
+
+	<div class="wrapper">
+		<p>Type in a Blog name</p>
+		<input type="text" id="input" placeholder="Enter blog here" ng-model="text" required>
+		<input type="submit" id="blog" value="Search" ng-click="fetchDataBlog('text')">
+			<!-- <ul class="button">
+				<li id="photo" ng-click="fetchDataPhoto()">Pictures</li>
+				<li id="audio" ng-click="fetchDataAudio()">Audios</li>
+				<li id="video" ng-click="fetchDataVideo()">Videos</li>
+			</ul> -->
+	</div>
+	<div id="alert"></div>
+		<ul class="blogInfo">
+			<li>
+				<ul>
+					<!-- <h2>Blog Name</h2> -->
+					<li id="title">
+					</li>
+				</ul>
+			</li>
+			<li>
+				<ul>
+					<!-- <h2>Blog Description</h2> -->
+					<li id="description">
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<div>
+			<ul id="validation"></ul>
+			<ul id="result">
+
+				<li class="blogs">
+					 
+					<p>{{results.title}}"/></p>
+					
+				</li>
+
+			</ul>
+		</div>
+
+
+	
+
+</body>
+
+	<script type="text/javascript" src="js/angular/angular.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</html>
+
